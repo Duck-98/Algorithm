@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer = s;
+                answer = s.replace(/a/g, '#'); // g가 없으면 첫번째 a만 바꿔주기 때문에 global g를 사용해야함.
+                console.log(s);
+                return answer;
+                
+                
+            }
+            
+            let str = "banana";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
