@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+               let answer;
+               let mid = Math.floor(s.length/2);
+              if(s.length %2 ==1) answer = s.substring(mid, mid+1);
+// ex) 홀수 study 2로 나눴을 때 2번째인 t까지 온 상태에서 가운데 값으로 가기 위해서는 한칸 더 움직여야하기 때문에 +1을 해줌.
+              else answer = s.substring(mid-1,mid+1);
+// ex) 짝수 good 2로 나눈 후 2번째인 o까지 온 후 뒤에 있는 o도 출력해야하기 때문에 중간값 -1 ~ 중간값 +1을 해야함.
+                return answer; 
+            }
+            
+            let str = "study";
+
+           
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
