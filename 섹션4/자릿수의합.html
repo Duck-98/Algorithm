@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+                let answer;
+                let max=Number.MIN_SAFE_INTEGER; // 최대값을 찾기위해 가장 작은 값으로 초기화
+                    for(let x of arr){
+                        /*let sum=0, tmp=x;
+                         while(tmp){
+                             sum+= (tmp%10);
+                             tmp=Math.floor(tmp/10);
+                         } */
+                        let sum = x.toString().split('').reduce((a,b)=> a+Number(b),0);
+                        // 배열화 한 후 각 배열을 reduce함수를 이용하여 더함. 
+                        console.log(sum);
+                        if(sum>max){
+                             max = sum;
+                             answer=x;
+                         }else if(sum===max){ // 자릿수의 합이 같은 경우 원래 숫자가
+                            // 큰쪽으로 출력을 하게 설정.
+                            if(x>answer) answer =x;
+                         } 
+                         
+                    } 
+                return answer;
+            }
+            
+            let  arr= [128,460,603,40,521,137,123];
+            console.log(solution(7,arr));
+        </script>
+    </body>
+</html>
+
+
+

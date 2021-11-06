@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer = "yes";
+                stack=[];
+                for(let x of s){
+                    if(x==='(') stack.push(x);
+                    else{
+                        if(stack.length===0) return "No"; // 스택이 비어있는 상황
+                        stack.pop();
+                    }
+                }
+                 if(stack.length>0) return "No"; // 스택에 남았다는 뜻.        
+                    
+                return answer;
+            }
+            
+            let a="(()(())))";
+            console.log(solution(a));
+        </script>
+    </body>
+</html>
+
+
+

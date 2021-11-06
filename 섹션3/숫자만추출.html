@@ -1,0 +1,25 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer=0;
+                for(let x of str){ // str을 한개씩 나눠서 숫자인지 판별.
+                    if(!isNaN(x)) answer+=x;
+                }
+                
+                return parseInt(answer);
+            }
+            
+            let str="g0en2T0s8eSoft";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+
+
