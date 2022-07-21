@@ -6,23 +6,23 @@
     <body>
         <script>
             function solution(a, b, c){
-                let answer="yes", max;
-                let sum = a+b+c;
-                if(a>b){
+                let answer="YES", max;
+                const sum = a+b+c;
+                if(a<b){
                     max = a;
-                }else{
+                } else{
                     max = b;
                 }
-                if(max<c){
+                if(c>max){
                     max=c;
                 }
                 if((sum-max)<=max){
-                    answer="NO";
+                    answer="NO"
                 }
                 return answer;
             }
 
-            console.log(solution(6,7, 11));
+            console.log(solution(13, 33, 17));
         </script>
     </body>
 </html>
